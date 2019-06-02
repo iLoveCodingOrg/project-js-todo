@@ -1,1 +1,1 @@
-# To-Do-App
+# Project Todo App with JavaScript
