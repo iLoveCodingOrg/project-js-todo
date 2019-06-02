@@ -19,7 +19,6 @@ const itemToAdd = document.querySelector('#itemToAdd');
 const ul = document.querySelector('.todo');
 
 form.addEventListener('submit', function(event){
-  event.preventDefault();
   const newItem = createItem(itemToAdd.value);
   ul.appendChild(newItem);
   itemToAdd.value = '';
