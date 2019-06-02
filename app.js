@@ -5,6 +5,11 @@
     // add the userTEXT to the element
     // ADD the element as a child to UL
 // 4. When delete is clicked, delete the item
+    // add a delete button
+    // delete button on click, should remove the item
+// 5. After Item is added, clear the text field
+// 6. Auto focus after add.
+// 7. Enable Enter-to-submit functionality
 
 const addButton = document.querySelector('#addButton');
 const itemToAdd = document.querySelector('#itemToAdd');
@@ -17,7 +22,14 @@ addButton.addEventListener('click', function(){
 
 function createItem(val){
   const item = document.createElement('li');
-  item.textContent = val;
+  const span = document.createElement('span');
+  const delBtn = document.createElement('button');
+  
+  span.textContent = val;
+  delBtn.textContent = 'Delete';
+
+  item.appendChild(span);
+  item.appendChild(delBtn);
 
   return item;
 }
