@@ -7,6 +7,8 @@
 // 4. When delete is clicked, delete the item
     // add a delete button
     // delete button on click, should remove the item
+      // add an event listener
+      // delete the parent
 // 5. After Item is added, clear the text field
 // 6. Auto focus after add.
 // 7. Enable Enter-to-submit functionality
@@ -27,9 +29,14 @@ function createItem(val){
   
   span.textContent = val;
   delBtn.textContent = 'Delete';
+  delBtn.classList.add('btn-link');
 
   item.appendChild(span);
   item.appendChild(delBtn);
+  
+  delBtn.addEventListener('click', function(){
+    item.parentNode.removeChild(item);
+  })
 
   return item;
 }
